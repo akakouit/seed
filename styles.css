@@ -58,22 +58,30 @@ body {
   text-align: center;
 }
 
-.section h2 {
-  margin-bottom: 20px;
-  font-size: 2em;
-}
-
-.hero {
+.master   {
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
 }
 
-.hero img {
+.master   img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.lamp {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+.lamp img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .overlay {
@@ -88,7 +96,7 @@ body {
 }
 
 .overlay h1 {
-  font-size: 4em;
+  font-size: ３em;
   font-weight: bold;
   font-family: "IPAMincho", serif;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
@@ -99,13 +107,124 @@ body {
 @media (max-width: 768px) {
   .overlay h1 {
     font-size: 2.5em;
-    /* フォントサイズを縮小 */
   }
 }
 
 @media (max-width: 480px) {
   .overlay h1 {
     font-size: 2em;
-    /* フォントサイズをさらに縮小 */
   }
+}
+
+.MenuContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.zdo_drawer_menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  /* 初期状態で画面外に隠す */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: right 0.3s ease;
+}
+
+.zdo_drawer_menu.open {
+  right: 0;
+  /* メニューが開いた状態 */
+}
+
+.zdo_drawer_button {
+  position: absolute;
+  top: 20px;
+  left: -50px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  /* 背景を透明にする */
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  /* ラインを縦に並べる */
+  justify-content: center;
+  align-items: center;
+}
+
+.zdo_drawer_bar {
+  display: block;
+  width: 30px;
+  /* ラインの幅 */
+  height: 2px;
+  /* ラインの高さ */
+  background-color: white;
+  /* ラインの色 */
+  margin: 5px 0;
+  /* ライン間のスペース */
+  transition: background-color 0.3s ease;
+  /* ホバー時の変化にスムーズなトランジションを追加 */
+}
+
+.zdo_drawer_button:hover .zdo_drawer_bar {
+  background-color: rgba(255, 255, 255, 0.7);
+  /* ホバー時のライン色を半透明にする */
+}
+.zdo_drawer_nav_wrapper {
+  padding-top: 100px;
+  /* メニューアイコンの下にナビゲーションを配置 */
+}
+
+.zdo_drawer_nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.zdo_drawer_nav li {
+  margin: 20px 0;
+}
+
+.zdo_drawer_nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.zdo_drawer_nav li a:hover {
+  text-decoration: underline;
+}
+
+.contact-link {
+	color: black;
+	/* リンクのテキストとアイコンの色を黒に設定 */
+	text-decoration: none;
+	/* 下線を消す */
+	font-size: 2em;
+	/* アイコンとテキストのサイズを2emに設定 */
+	display: inline-flex;
+	/* アイコンとテキストを横並びにする */
+	align-items: center;
+	/* アイコンとテキストの垂直位置を中央に揃える */
+}
+
+.contact-link i {
+	margin-right: 8px;
+	/* アイコンとテキストの間にスペースを追加 */
+}
+
+.contact-link:hover {
+	color: #e1306c;
+	/* ホバー時にインスタグラムリンクはブランドカラーに変更 */
+}
+
+.contact-link:hover i {
+	color: #e1306c;
+	/* ホバー時にアイコンの色も変更 */
 }
