@@ -72,16 +72,16 @@ body {
 }
 
 .lamp {
-	position: relative;
-	height: 100vh;
-	width: 100%;
-	overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .lamp img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .overlay {
@@ -113,6 +113,13 @@ body {
 @media (max-width: 480px) {
   .overlay h1 {
     font-size: 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  #access p {
+    display: block;
+    text-align: center;
   }
 }
 
@@ -202,29 +209,29 @@ body {
 }
 
 .contact-link {
-	color: black;
-	/* リンクのテキストとアイコンの色を黒に設定 */
-	text-decoration: none;
-	/* 下線を消す */
-	font-size: 2em;
-	/* アイコンとテキストのサイズを2emに設定 */
-	display: inline-flex;
-	/* アイコンとテキストを横並びにする */
-	align-items: center;
-	/* アイコンとテキストの垂直位置を中央に揃える */
+  color: black;
+  /* リンクのテキストとアイコンの色を黒に設定 */
+  text-decoration: none;
+  /* 下線を消す */
+  font-size: 2em;
+  /* アイコンとテキストのサイズを2emに設定 */
+  display: inline-flex;
+  /* アイコンとテキストを横並びにする */
+  align-items: center;
+  /* アイコンとテキストの垂直位置を中央に揃える */
 }
 
 .contact-link i {
-	margin-right: 8px;
-	/* アイコンとテキストの間にスペースを追加 */
+  margin-right: 8px;
+  /* アイコンとテキストの間にスペースを追加 */
 }
 
 .contact-link:hover {
-	color: #e1306c;
-	/* ホバー時にインスタグラムリンクはブランドカラーに変更 */
+  color: #e1306c;
+  /* ホバー時にインスタグラムリンクはブランドカラーに変更 */
 }
 
 .contact-link:hover i {
-	color: #e1306c;
-	/* ホバー時にアイコンの色も変更 */
+  color: #e1306c;
+  /* ホバー時にアイコンの色も変更 */
 }
