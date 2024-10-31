@@ -231,7 +231,9 @@ body.show-header header {
 }
 
 /* 複数画像切り替え---------------------------------------------- */
-.slider-container {
+.inner-block {
+	top: 0;
+	left: 0;
 	position: relative;
 	width: 100vw;
 	height: 100vh;
@@ -239,45 +241,20 @@ body.show-header header {
 	background-color: white;
 }
 
+.fade-img-box {
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
 
-.slideimg {
+.fade-img-box img {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
-	opacity: 0;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	animation: slideAnime 9s infinite;
-	transition: opacity 1s ease-in-out;
-}
-
-@keyframes slideAnime {
-
-	0%,
-	63%,
-	100% {
-		opacity: 0;
-	}
-	20%,
-	33% {
-		opacity: 1;
-	}
-}
-
-.slideimg:nth-of-type(1) {
-	background-image: url('files/crab.jpeg');
-	animation-delay: 0s;
-}
-
-.slideimg:nth-of-type(2) {
-	background-image: url('files/tenpura.jpg');
-	animation-delay: 3s;
-}
-
-.slideimg:nth-of-type(3) {
-	background-image: url('files/osya.jpg');
-	animation-delay: 6s;
+	/* dont delete */
+	object-fit: cover;
 }
